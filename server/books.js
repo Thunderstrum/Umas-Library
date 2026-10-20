@@ -2,7 +2,6 @@ import sql from 'mssql';
 
 export async function listBooks(database, search = '') {
     const term = String(search).trim();
-    console.log( { term });
 
     if (term.length > 100) {
         const error = new Error('Search query is too long');
